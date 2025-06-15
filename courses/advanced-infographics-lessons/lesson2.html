@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Современные программные средства в инфографике</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../../images/logo.png" alt="Logo">
+                <h1>UNIINFO</h1>
+            </div>
+            <ul>
+                <li><a href="../../index.html">Главная</a></li>
+                <li><a href="../../sections/programs.html">Каталог программ</a></li>
+                <li><a href="../../sections/training.html">Обучение</a></li>
+                <li><a href="../../sections/tests.html">Тесты</a></li>
+                <li><a href="../../sections/gallery.html">Галерея</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-content">
+            <div class="lesson-details">
+                <h1>Интерактивная инфографика</h1>
+
+                <section>
+                    <h2>1. От статики к интерактиву</h2>
+                    <p>Интерактивная инфографика трансформирует пассивного зрителя в активного исследователя данных.</p>    
+                    <h3>Уровни интерактивности</h3>
+                    <ol>
+                        <li><strong>Базовый:</strong> Ховер-эффекты, tooltips</li>
+                        <li><strong>Средний:</strong> Фильтрация, сортировка, масштабирование</li>
+                        <li><strong>Продвинутый:</strong> Полноценные дашборды с управляемыми параметрами</li>
+                    </ol>
+                
+                    <div class="example-img">
+                        <h3>Пример:</h3>
+                        <p><em>Слева — контрастные цвета и четкие шрифты, справа — плохая читаемость.</em></p>
+                        <img src="https://example.com/color-typography-comparison" alt="Сравнение хорошей и плохой инфографики">
+                    </div>
+                </section>
+
+                <section>
+                    <h2>2. Технологии создания</h2>
+                    <strong>D3.js</strong>
+                    <p>Библиотека для сложных кастомных визуализаций</p>
+                    <code>npm install d3</code>
+
+                    <strong>Chart.js</strong>
+                    <p>Простая библиотека для интерактивных графиков</p>
+                    <code>chart.js.org</code>
+            
+                    <strong>Three.js</strong>
+                    <p>3D-визуализации в браузере</p>
+            
+                    <strong>Flourish</strong>
+                    <p>Конструктор без кодинга</p>
+           
+                    <h3>Пример кода (D3.js)</h3>
+                    <pre><code>// Создание интерактивного графика
+                    svg.selectAll("circle")
+                    .on("mouseover", function(event, d) {
+                    tooltip.style("visibility", "visible")
+                    .html(`Значение: ${d.value}`);
+                    })
+                    .on("mouseout", function() {
+                     tooltip.style("visibility", "hidden");
+                    });
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>3. Паттерны взаимодействия</h2>
+                        
+                    <h3>Основные элементы управления</h3>
+                    <ul>
+                        <li><strong>Фильтры:</strong> Выпадающие списки, чекбоксы</li>
+                        <li><strong>Масштабирование:</strong> Зум колесом мыши или жестами</li>
+                        <li><strong>Детализация:</strong> Клик по элементам для подробностей</li>
+                        <li><strong>Анимация:</strong> Плавные переходы между состояниями</li>
+                    </ul>
+                        
+                    <h3>Ошибки проектирования</h3>
+                    <ul>
+                        <li>Слишком сложный интерфейс</li>
+                        <li>Отсутствие визуальных подсказок</li>
+                        <li>Медленная работа на мобильных устройствах</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>4. Персонализация данных</h2>
+
+                    <h3>Техники вовлечения</h3>
+                    <ul>
+                        <li><strong>"Найдите себя":</strong> Фильтр по демографическим данным</li>
+                        <li><strong>Сравнение с другими:</strong> "Вы выше 80% пользователей"</li>
+                        <li><strong>Сценарии "что если":</strong> Изменение параметров с мгновенным расчетом</li>
+                    </ul>
+            
+                    <div class="example-img">
+                        <h3>Пример:</h3>
+                        <p><em>Слева — контрастные цвета и четкие шрифты, справа — плохая читаемость.</em></p>
+                        <img src="https://example.com/color-typography-comparison" alt="Сравнение хорошей и плохой инфографики">
+                    </div>
+                </section>
+
+                <div class="task">
+                    <h3>Часть 1: Прототипирование</h3>
+                    <p>Создайте интерактивную инфографику на одну из тем:</p>
+                    <ul>
+                        <li>Динамика цен на жилье в вашем регионе</li>
+                        <li>Сравнение питания в разных фастфудах</li>
+                        <li>История развития технологий смартфонов</li>
+                    </ul>
+        
+                    <h3>Технические требования:</h3>
+                    <ol>
+                        <li>Не менее 3 интерактивных элементов (фильтры, детализация и т.д.)</li>
+                        <li>Адаптивность под мобильные устройства</li>
+                        <li>Оптимизация производительности</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="back-to-courses">
+                <a href="../advanced-infographics.html" class="btn">Назад к курсу</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Современные программные средства</p>
+    </footer>
+</body>
+</html>
