@@ -1,0 +1,1332 @@
+
+/* Основные стили */
+html, body {
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Основные стили для навигации */
+header {
+    backdrop-filter: blur(10px); 
+    padding: 10px 20px;
+    top: 0;
+    position: sticky;
+    z-index: 1000;
+}
+
+main {
+    flex: 1; 
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #38302d;;
+}
+
+/* Стили для списка навигации */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px; 
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #38302d;; 
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px; 
+    background-color: #ffffff; 
+    border-radius: 25px; 
+    transition: all 0.3s ease; 
+    display: inline-block;
+}
+
+
+/* Эффект при наведении */
+nav ul li a:hover {
+    background-color: #66d3c8; 
+    color: #ffffff; 
+}
+
+/* Секция героя */
+#hero {
+    position: relative;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #333; 
+    overflow: hidden;
+    background: linear-gradient(135deg, #f0f8ff, #e6f7ff); 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; 
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h2 {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 66px;
+    color: #66d3c8; 
+    margin-bottom: 20px;
+    animation: fadeInDown 1.5s ease;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #555; 
+    margin-bottom: 30px;
+    animation: fadeInUp 1.5s ease;
+}
+
+.hero-content .btn {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    animation: fadeIn 2s ease;
+}
+
+/* Фон с анимацией */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
+    z-index: 1;
+}
+
+.hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(102, 211, 200, 0.1), transparent);
+    animation: pulse 5s infinite alternate;
+}
+
+.hero-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 111, 97, 0.1), rgba(102, 211, 200, 0.1));
+    animation: rotate 20s linear infinite;
+}
+
+/* Анимации */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Стили для инфографики */
+#infographic {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.infographic-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.infographic-container h1 {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.roadmap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.roadmap::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #66d3c8; 
+    z-index: 1;
+}
+
+/* Стили для блоков */
+.step {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Цвета для каждого блока */
+.step.basics {
+    background: #94caff; 
+}
+
+.step.tools {
+    background: #efacd1; 
+}
+
+.step.professionalism {
+    background: #B8E2C8; 
+}
+
+.step.inspiration {
+    background: #F9E79F; 
+}
+
+/* Общие стили для иконок и текста */
+.step img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    color: #fff;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.step:hover img {
+    transform: scale(1.1);
+}
+
+.step .label {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.step .tooltip {
+    display: none;
+    position: absolute;
+    top: 110%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    z-index: 3;
+    opacity: 0; 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.step:hover .tooltip {
+    display: block;
+    opacity: 1; 
+    transform: translateX(-50%) translateY(0);
+}
+
+.step-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+
+/* Футер */
+footer {
+    backdrop-filter: blur(10px); 
+    padding: 10px 20px;
+    top: 0;
+    position: sticky;
+    z-index: 1000;
+}
+
+/* Стили для секции программ */
+
+#programs {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.programs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#programs h2 {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 66px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.program-card {
+    border-radius: 30px 30px 30px 30px;
+    background-image: linear-gradient(180deg, rgba(248, 248, 250, 1) 0%, rgba(249, 249, 249, 1) 100%);
+    border-color: transparent;
+    border-style: solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    justify-content: space-between;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.program-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.program-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.program-card p {
+    font-size: 1rem;
+    color: #848484;
+    margin-bottom: 15px;
+}
+
+.program-card a {
+    flex-grow: 1;
+    text-decoration: none;
+    color: inherit;
+    justify-content: space-between;
+}
+
+.program-card .btn {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px; 
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #94caff; 
+    border-radius: 25px; 
+    transition: all 0.3s ease; 
+    display: inline-block;
+    align-self: center;
+    margin-top: auto;
+}
+
+.program-card .btn:hover {
+    color: #ffffff;
+    background-color: #333;
+}
+
+/* Секция обучения */
+#training {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#training h2 {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 66px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.training-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.training-card {
+    border-radius: 30px 30px 30px 30px;
+    background-image: linear-gradient(180deg, rgba(248, 248, 250, 1) 0%, rgba(249, 249, 249, 1) 100%);
+    border-color: transparent;
+    border-style: solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.training-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.training-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.training-card p {
+    font-size: 1rem;
+    color: #848484;
+    margin-bottom: 15px;
+}
+
+.training-card .btn {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px; 
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #94caff; 
+    border-radius: 25px; 
+    transition: all 0.3s ease; 
+    display: inline-block;
+}
+
+.training-card .btn:hover {
+    color: #ffffff;
+    background-color: #333;
+}
+
+/* Секция тестов */
+#tests {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#tests h2 {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 66px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.tests-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.test-card {
+    border-radius: 30px 30px 30px 30px;
+    background-image: linear-gradient(180deg, rgba(248, 248, 250, 1) 0%, rgba(249, 249, 249, 1) 100%);
+    border-color: transparent;
+    border-style: solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.test-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.test-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.test-card p {
+    font-size: 1rem;
+    color: #848484;
+    margin-bottom: 15px;
+}
+
+.test-card .btn {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px; 
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #94caff; 
+    border-radius: 25px; 
+    transition: all 0.3s ease; 
+    display: inline-block;
+}
+
+.test-card .btn:hover {
+    color: #ffffff;
+    background-color: #333;
+}
+
+ /* Стили для галереи */
+  .gallery-wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px; 
+}
+
+.gallery-wrapper h2 {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 66px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.gallery-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.gallery-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.gallery-slide {
+    flex: 0 0 33.333%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.gallery-card {
+    background: #f8f8fa;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    height: 100%;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background: white;
+    padding: 20px;
+}
+
+/* Стили стрелок */
+.gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: #94caff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.gallery-arrow:hover {
+    background: #333;
+}
+
+.gallery-arrow--prev {
+    left: 0;
+}
+
+.gallery-arrow--next {
+    right: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .gallery-slide {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-slide {
+        flex: 0 0 100%;
+    }
+    
+    .gallery-wrapper {
+        padding: 0 40px;
+    }
+    
+    .gallery-arrow {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Стили для страницы с описанием программы */
+#program-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.program-hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.program-hero-image {
+    flex: 1;
+    max-width: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.program-hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.program-hero-content {
+    flex: 2;
+}
+
+.program-hero-content h2 {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 66px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.program-hero-content .tagline {
+    font-size: 1rem;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #848484;
+    margin-bottom: 15px;
+}
+
+.program-hero-content .btn {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px; 
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #94caff; 
+    border-radius: 15px; 
+    transition: all 0.3s ease; 
+    display: inline-block;
+}
+
+.program-hero-content .btn:hover {
+    color: #ffffff;
+    background-color: #333;
+}
+
+.program-info {
+    margin-top: 40px;
+}
+
+.program-description h3,
+.program-features h3,
+.program-examples h3 {
+    font-size: 1.5rem;
+    color: #333;
+    font-family: 'Inter', Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+.program-description p {
+    font-size: 1rem;
+    color: #848484;
+    font-family: 'Inter', Arial, sans-serif;
+    margin-bottom: 15px;
+}
+
+.program-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.program-features ul li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.program-features ul li i {
+    color: #94caff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.program-examples .examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.program-examples .examples-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-examples .examples-grid img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для страницы статей */
+#articles {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#articles h2 {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 66px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.articles-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.article-card {
+    display: flex;
+    background-color: white;
+    background-image: linear-gradient(180deg, rgba(248, 248, 250, 1) 0%, rgba(249, 249, 249, 1) 100%);
+    border-color: transparent;
+    border-radius: 30px 30px 30px 30px;
+    border-style: solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.article-content {
+    flex: 2;
+    padding: 20px;
+    font-family: 'Inter', Arial, sans-serif;
+    text-align: left;
+}
+
+.article-content h3 {
+    font-size: 2rem;
+    color: #94caff;
+    margin-bottom: 10px;
+}
+
+.article-content h4 {
+    color: #50a4f8;
+    margin-bottom: 10px;
+}
+
+.article-content .article-description {
+    font-size: 1.25rem;
+    color: #372f2c;
+    margin-bottom: 10px;
+}
+
+.article-content .article-preview {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.article-content .btn {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px; 
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #94caff; 
+    border-radius: 25px; 
+    transition: all 0.3s ease; 
+    display: inline-block;
+}
+
+.article-content .btn:hover {
+    color: #ffffff;
+    background-color: #333;
+}
+
+/* Стили для страницы статьи */
+#article-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: left;
+}
+
+#article-detail h2 {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 66px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.article-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.article-content ul li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.article-content ul li::before {
+    content: "✔";
+    color: #94caff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Основные стили для секции курсов */
+#courses {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#courses h2 {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 66px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Стили для фильтров */
+.filters {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.filters select {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 1rem;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filters select:hover {
+    border-color: #94caff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Контейнер для карточек курсов */
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Стили для карточки курса */
+.course-card {
+    border-radius: 30px;
+    background-image: linear-gradient(180deg, rgba(248, 248, 250, 1) 0%, rgba(249, 249, 249, 1) 100%);
+    border-color: transparent;
+    border-style: solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.course-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.course-card h3 {
+    font-size: 1.5rem;
+    color: #94caff;
+    font-family: 'Inter', Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    font-size: 1rem;
+    color: rgb(55, 47, 44);
+    margin-bottom: 15px;
+}
+
+.course-card .rating {
+    font-size: 0.9rem;
+    color: #ff9800;
+    margin-bottom: 15px;
+}
+
+.course-card .btn {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px;
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #94caff;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.course-card .btn:hover {
+    color: #ffffff;
+    background-color: #333;
+}
+
+/* Основные стили для секции курса */
+#course-detail {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#course-detail h2 {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 66px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Стили для прогресс-бара */
+.progress {
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    position: relative;
+    height: 20px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #94caff;
+    transition: width 0.5s ease;
+    border-radius: 25px;
+}
+
+.progress span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+/* Стили для уроков на странице курса */
+.lessons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.lesson {
+    background-image: linear-gradient(180deg, rgba(248, 248, 250, 1) 0%, rgba(249, 249, 249, 1) 100%);
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lesson:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.lesson .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #94caff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.lesson .btn:hover {
+    background-color: #333;
+    color: #ffffff;
+}
+
+.lesson .btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.course-description {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+/* Стили для уроков */
+#lesson-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: left;
+}
+#lesson-content h1{
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 66px;
+    color: #333;
+    margin-bottom: 40px;
+}
+.lesson-details h2 {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 33px;
+    color: #94caff;
+    margin-bottom: 40px;
+}
+
+.lesson-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.lesson-details ul li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.lesson-details ol li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.lesson-details table tr th {
+    color: #94caff;
+}
+
+.lesson-details table tr td strong {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    position: relative;
+} 
+
+.lesson-details ul li::before {
+    content: "✔";
+    color: #94caff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.back-to-courses {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.back-to-courses .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #94caff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-to-courses .btn:hover {
+    background-color: #333;
+    color: #ffffff;
+}
+
+.lesson-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.progress-indicator {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 0.9rem;
+    color: #848484;
+    margin-top: 10px;
+}
+
+/* Стили для тестов */
+#test {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.question {
+    background-image: linear-gradient(180deg, rgba(248, 248, 250, 1) 0%, rgba(249, 249, 249, 1) 100%);
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.question:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.question h3 {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.question label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1rem;
+    color: #848484;
+    cursor: pointer;
+}
+
+.question input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Стили для результата теста */
+#result {
+    margin-top: 20px;
+    padding: 20px;
+    background-image: linear-gradient(180deg, rgba(248, 248, 250, 1) 0%, rgba(249, 249, 249, 1) 100%);
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#result.hidden {
+    display: none;
+}
+
+#result h3 {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#result p {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1rem;
+    color: #848484;
+}
+
+/* Стили для кнопки "Завершить тест" */
+#test-form .btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #94caff;
+    color: #ffffff;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#test-form .btn:hover {
+    background-color: #333;
+    color: #ffffff;
+}
+
+/* Стили для кнопки "Вернуться к тестам" */
+.return-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #94caff;
+    color: #ffffff;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.return-btn:hover {
+    background-color: #333;
+    color: #ffffff;
+}
