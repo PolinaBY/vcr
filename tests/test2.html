@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Современные программные средства в инфографике</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../images/logo.png" alt="Logo">
+                <h1>Современные программные средства</h1>
+            </div>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../sections/programs.html">Обзор программ</a></li>
+                <li><a href="../sections/training.html">Обучение</a></li>
+                <li><a href="../sections/tests.html">Тесты</a></li>
+                <li><a href="../sections/gallery.html">Галерея</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="test">
+            <h2>Тест: Инструменты для инфографики</h2>
+            <form id="test-form" data-test-id="tools-for-infographics">
+                 <!-- Вопрос 1 -->
+                <div class="question">
+                    <h3>1. Какой инструмент лучше всего подходит для создания простой инфографики?</h3>
+                    <label>
+                        <input type="radio" name="q1" value="a"> Adobe Photoshop
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="b"> Canva
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="c"> Microsoft Excel
+                    </label>
+                </div>
+
+                <!-- Вопрос 2 -->
+                <div class="question">
+                    <h3>2. Какой инструмент позволяет создавать сложные кастомные визуализации с помощью JavaScript?</h3>
+                    <label>
+                        <input type="radio" name="q2" value="a"> Canva
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="b"> Adobe Illustrator
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="c"> D3.js
+                    </label>
+                </div>
+
+                <!-- Вопрос 3 -->
+                <div class="question">
+                    <h3>3. Какой инструмент сочетает возможности презентаций и инфографики с AI-ассистентом?</h3>
+                    <label>
+                        <input type="radio" name="q3" value="a"> Visme
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="b"> Google Slides
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="c"> Microsoft Excel
+                    </label>
+                </div>
+
+                <!-- Вопрос 4 -->
+                <div class="question">
+                    <h3>4. Какой инструмент лучше всего подходит для создания инфографики с анимацией?</h3>
+                    <label>
+                        <input type="radio" name="q4" value="a"> Visme
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="b"> Flourish
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="c"> PowerPoint
+                    </label>
+                </div>
+
+                <!-- Вопрос 5 -->
+                <div class="question">
+                    <h3>5. Для командной работы над инфографикой в реальном времени лучше использовать?</h3>
+                    <label>
+                        <input type="radio" name="q5" value="a"> Figma
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="b"> Photoshop
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="c"> Adobe Spark
+                    </label>
+                </div>
+                <button type="submit" class="btn">Завершить тест</button>
+            </form>
+
+            <div id="result" class="hidden">
+                <h3>Результат теста</h3>
+                <p>Вы ответили правильно на <span id="score">0</span> из 5 вопросов.</p>
+                <a href="../sections/tests.html" class="btn return-btn">Вернуться к тестам</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Современные программные средства</p>
+    </footer>
+
+    <!-- Подключение script.js -->
+    <script src="../script.js"></script>
+</body>
+</html>
