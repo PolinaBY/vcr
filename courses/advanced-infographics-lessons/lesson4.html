@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Современные программные средства в инфографике</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../../images/logo.png" alt="Logo">
+                <h1>UNIINFO</h1>
+            </div>
+            <ul>
+                <li><a href="../../index.html">Главная</a></li>
+                <li><a href="../../sections/programs.html">Каталог программ</a></li>
+                <li><a href="../../sections/training.html">Обучение</a></li>
+                <li><a href="../../sections/tests.html">Тесты</a></li>
+                <li><a href="../../sections/gallery.html">Галерея</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lesson-content">
+            <div class="lesson-details">
+                <h1>Анимация в инфографике: принципы и техники</h1>
+
+                <section>
+                    <h2>1. Когда анимация уместна</h2>
+                    <p>Анимация должна не просто украшать, а выполнять конкретные задачи:</p>
+        
+                    <h3>4 главных цели анимации</h3>
+                    <ol>
+                        <li><strong>Привлечение внимания</strong> к ключевым данным</li>
+                        <li><strong>Демонстрация процессов</strong> (изменение во времени)</li>
+                        <li><strong>Объяснение сложных концепций</strong> через движение</li>
+                        <li><strong>Создание нарратива</strong> — последовательное раскрытие информации</li>
+                    </ol>
+        
+                    <div class="example-img">
+                        <h3>Поток чтения</h3>
+                        <p>В западной культуре естественное движение взгляда — слева направо, сверху вниз. Размещайте информацию соответственно.</p>
+                        <img src="https://example.com/color-typography-comparison" alt="Сравнение хорошей и плохой инфографики">
+                    </div>
+                </section>
+
+                <section>
+                    <h2>2. Основные типы анимации</h2>
+        
+                    <strong>Морфинг</strong>
+                    <p>Плавное преобразование форм (например, круги → столбцы)</p>
+                        
+                    <strong>Маскирование</strong>
+                    <p>Постепенное раскрытие информации</p>
+                        
+                    <strong>Параллакс</strong>
+                    <p>Слоистое движение для создания глубины</p>
+                        
+                    <strong>Последовательность</strong>
+                    <p>Пошаговое появление элементов</p>
+                    
+                    
+                    <h3>Чего избегать</h3>
+                    <ul>
+                        <li>Бесполезных вращений и прыгающих элементов</li>
+                        <li>Слишком быстрых или медленных анимаций</li>
+                        <li>Одновременного движения многих объектов</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>3. Технические реализации</h2>
+    
+                    <h3>Популярные инструменты</h3>
+                    <strong>After Effects</strong>
+                    <p>Для сложных видео-инфографик</p>
+                    
+                    <strong>CSS/GSAP</strong>
+                    <p>Веб-анимации</p>
+                   
+                    <strong>Rive</strong>
+                    <p>Интерактивная векторная анимация</p>
+                    
+                    <h3>Пример кода (CSS)</h3>
+                    <pre><code>/* Анимация появления столбца диаграммы */
+                    @keyframes grow {
+                    from { height: 0; opacity: 0; }
+                    to { height: var(--data-value); opacity: 1; }
+                    }
+
+                    .chart-bar {
+                    animation: grow 1s ease-out forwards;
+                    animation-delay: calc(var(--index) * 0.2s);
+                    }</code></pre>
+                </section>
+
+                <section>
+                    <h2>4. 12 принципов анимации Disney в инфографике</h2>
+        
+                    <h3>Самые полезные принципы</h3>
+                    <ul>
+                        <li><strong>Сжатие и растяжение</strong> — для "оживления" графиков</li>
+                        <li><strong>Антиципация</strong> — подготовка к важным изменениям</li>
+                        <li><strong>Slow in/out</strong> — плавные ускорения и замедления</li>
+                        <li><strong>Вторичные действия</strong> — дополнительные движения для реализма</li>
+                    </ul>
+                    
+                    <div class="example-img">
+                        <h3>Поток чтения</h3>
+                        <p>В западной культуре естественное движение взгляда — слева направо, сверху вниз. Размещайте информацию соответственно.</p>
+                        <img src="https://example.com/color-typography-comparison" alt="Сравнение хорошей и плохой инфографики">
+                    </div>
+                </section>
+
+                <div class="task">
+                    <h2>Практическое задание</h2>
+        
+                    <h3>Часть 1: Анализ</h3>
+                    <ol>
+                        <li>Найдите 2 примера анимированной инфографики (хороший и плохой)</li>
+                        <li>Разберите:
+                        <ul>
+                            <li>Типы использованных анимаций</li>
+                            <li>Соответствие целям</li>
+                            <li>Техническую реализацию</li>
+                        </ul>
+                    </ol>
+        
+                    <h3>Часть 2: Создание</h3>
+                    <p>Анимируйте существующую инфографику:</p>
+                    <ol>
+                        <li>Выберите статичную инфографику из предыдущих работ</li>
+                        <li>Добавьте 3+ типа осмысленных анимаций</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="back-to-courses">
+                <a href="../advanced-infographics.html" class="btn">Назад к курсу</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Современные программные средства</p>
+    </footer>
+</body>
+</html>
