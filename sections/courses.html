@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Современные программные средства в инфографике</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../images/logo.png" alt="Logo">
+                <h1>UNIINFO</h1>
+            </div>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../sections/programs.html">Каталог программ</a></li>
+                <li><a href="../sections/training.html">Обучение</a></li>
+                <li><a href="../sections/tests.html">Тесты</a></li>
+                <li><a href="../sections/gallery.html">Галерея</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="courses">
+            <h2>Курсы</h2>
+            <div class="filters">
+                <select id="category-filter">
+                    <option value="all">Все категории</option>
+                    <option value="beginner">Для начинающих</option>
+                    <option value="advanced">Для продвинутых</option>
+                </select>
+                <select id="duration-filter">
+                    <option value="all">Любая продолжительность</option>
+                    <option value="short">Короткие (до 2 часов)</option>
+                    <option value="medium">Средние (2-5 часов)</option>
+                    <option value="long">Длинные (более 5 часов)</option>
+                </select>
+            </div>
+            <div class="courses-container">
+                <!-- Курс 1 -->
+                <div class="course-card" data-category="beginner" data-duration="short">
+                    <h3>Основы инфографики</h3>
+                    <p>Краткий курс для тех, кто только начинает работать с инфографикой.</p>
+                    <div class="rating">★★★★☆</div>
+                    <a href="../courses/basics-of-infographics.html" class="btn">Подробнее</a>
+                </div>
+                <!-- Курс 2 -->
+                <div class="course-card" data-category="advanced" data-duration="medium">
+                    <h3>Продвинутая инфографика</h3>
+                    <p>Углублённый курс для тех, кто хочет освоить профессиональные техники.</p>
+                    <div class="rating">★★★★★</div>
+                    <a href="../courses/advanced-infographics.html" class="btn">Подробнее</a>
+                </div>
+                <!-- Добавьте другие курсы -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Современные программные средства</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
