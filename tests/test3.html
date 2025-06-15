@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Современные программные средства в инфографике</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../images/logo.png" alt="Logo">
+                <h1>Современные программные средства</h1>
+            </div>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../sections/programs.html">Обзор программ</a></li>
+                <li><a href="../sections/training.html">Обучение</a></li>
+                <li><a href="../sections/tests.html">Тесты</a></li>
+                <li><a href="../sections/gallery.html">Галерея</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="test">
+            <h2>Тест: Визуализация данных</h2>
+            <form id="test-form" data-test-id="data-visualization">
+
+                <!-- Вопрос 1 -->
+                <div class="question">
+                    <h3>1. Какой тип графика лучше всего подходит для отображения распределения непрерывных данных?</h3>
+                    <label>
+                        <input type="radio" name="q1" value="a"> Круговая диаграмма
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="b"> Гистограмма
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="c"> Линейная диаграмма
+                    </label>
+                </div>
+
+                <!-- Вопрос 2 -->
+                <div class="question">
+                    <h3>2. Какой метод визуализации НЕ следует использовать для сравнения более 5 категорий?</h3>
+                    <label>
+                        <input type="radio" name="q2" value="a"> Круговая диаграмма
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="b"> Столбчатая диаграмма
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="c"> Линейный график
+                    </label>
+                </div>
+
+                <!-- Вопрос 3 -->
+                <div class="question">
+                    <h3>3. Какой цветовой палитры следует избегать при визуализации данных для дальтоников?</h3>
+                    <label>
+                        <input type="radio" name="q3" value="a"> Красно-зеленой
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="b"> Черно-белой
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="c"> Сине-желтой
+                    </label>
+                </div>
+
+                <!-- Вопрос 4 -->
+                <div class="question">
+                    <h3>4. Какой тип графика НЕ подходит для отображения временных рядов?</h3>
+                    <label>
+                        <input type="radio" name="q4" value="a"> Линейный график
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="b"> Диаграмма с областями
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="c"> Круговая диаграмма
+                    </label>
+                </div>
+
+                <!-- Вопрос 5 -->
+                <div class="question">
+                    <h3>5. Что означает термин "small multiples" в визуализации данных?</h3>
+                    <label>
+                        <input type="radio" name="q5" value="a"> Множество мини-графиков с одинаковой структурой
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="b"> Уменьшение размера графиков
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="c"> Дублирование осей на одном графике
+                    </label>
+                </div>
+
+                <button type="submit" class="btn">Завершить тест</button>
+            </form>
+
+            <div id="result" class="hidden">
+                <h3>Результат теста</h3>
+                <p>Вы ответили правильно на <span id="score">0</span> из 5 вопросов.</p>
+                <a href="../sections/tests.html" class="btn return-btn">Вернуться к тестам</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Современные программные средства</p>
+    </footer>
+
+    <!-- Подключение script.js -->
+    <script src="../script.js"></script>
+</body>
+</html>
