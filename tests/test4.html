@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Современные программные средства в инфографике</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../images/logo.png" alt="Logo">
+                <h1>Современные программные средства</h1>
+            </div>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../sections/programs.html">Обзор программ</a></li>
+                <li><a href="../sections/training.html">Обучение</a></li>
+                <li><a href="../sections/tests.html">Тесты</a></li>
+                <li><a href="../sections/gallery.html">Галерея</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="test">
+            <h2>Тест: Продвинутые техники создания инфографики</h2>
+            <form id="test-form" data-test-id="advanced-techniques">
+                <!-- Вопрос 1 -->
+                <div class="question">
+                    <h3>1. При визуализации многомерных данных (7+ показателей) вы выберете:</h3>
+                    <label>
+                        <input type="radio" name="q1" value="a"> Параллельные координаты
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="b"> Набор круговых диаграмм
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="c"> Текстовую таблицу
+                    </label>
+                </div>
+
+                <!-- Вопрос 2 -->
+                <div class="question">
+                    <h3>2. Для показа иерархических данных с 5 уровнями вложенности оптимально:</h3>
+                    <label>
+                        <input type="radio" name="q2" value="a"> Sunburst-диаграмма
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="b"> Пузырьковую карту
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="c"> Гистограмму
+                    </label>
+                </div>
+
+                <!-- Вопрос 3 -->
+                <div class="question">
+                    <h3>3. При создании анимированной инфографики о миграции населения вы примените:</h3>
+                    <label>
+                        <input type="radio" name="q3" value="a"> Вращающийся глобус
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="b"> Последовательную смену статических карт
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="c"> Санкей-диаграмму с потоковой анимацией
+                    </label>
+                </div>
+
+                <!-- Вопрос 4 -->
+                <div class="question">
+                    <h3>4. При создании дашборда для топ-менеджмента критически важно:</h3>
+                    <label>
+                        <input type="radio" name="q4" value="a"> Использовать все доступные визуализации
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="b"> Оставить только 3-5 ключевых метрик
+                    </label>
+                    <label>
+                        <input type="radio" name="q4" value="c"> Реализовать drill-down функционал
+                    </label>
+                </div>
+
+                <!-- Вопрос 5 -->
+                <div class="question">
+                    <h3>5. Для визуализации результатов A/B-теста с 15 метриками вы создадите:</h3>
+                    <label>
+                        <input type="radio" name="q5" value="a"> Отдельный график для каждой метрики
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="b"> Текстовый отчет
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="c"> Сравнительную матрицу с цветовым кодированием
+                    </label>
+                </div>
+
+                <button type="submit" class="btn">Завершить тест</button>
+            </form>
+
+            <div id="result" class="hidden">
+                <h3>Результат теста</h3>
+                <p>Вы ответили правильно на <span id="score">0</span> из 5 вопросов.</p>
+                <a href="../sections/tests.html" class="btn return-btn">Вернуться к тестам</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Современные программные средства</p>
+    </footer>
+
+    <!-- Подключение script.js -->
+    <script src="../script.js"></script>
+</body>
+</html>
