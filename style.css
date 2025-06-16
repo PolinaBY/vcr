@@ -1283,10 +1283,11 @@ body {
 }
 
 #courses h2 {
-    font-family: 'Inter', Arial, sans-serif;
+     font-family: 'Inter', Arial, sans-serif;
     font-size: 66px;
     color: #333;
     margin-bottom: 40px;
+    line-height: 1.2;
 }
 
 /* Стили для фильтров */
@@ -1392,10 +1393,11 @@ body {
 }
 
 #course-detail h2 {
-    font-family: 'Inter', Arial, sans-serif;
+     font-family: 'Inter', Arial, sans-serif;
     font-size: 66px;
     color: #333;
     margin-bottom: 40px;
+    line-height: 1.2;
 }
 
 /* Стили для прогресс-бара */
@@ -1497,6 +1499,7 @@ body {
     font-size: 66px;
     color: #333;
     margin-bottom: 40px;
+    line-height: 1.2;
 }
 .lesson-details h2 {
     font-family: 'Inter', Arial, sans-serif;
@@ -1580,6 +1583,70 @@ body {
     font-size: 0.9rem;
     color: #848484;
     margin-top: 10px;
+}
+
+/* Адаптация для больших планшетов и маленьких ноутбуков */
+@media (max-width: 1024px) {
+    #courses h2,
+    #course-detail h2, 
+    #lesson-content h1 {
+        font-size: 56px;
+        margin-bottom: 35px;
+    }
+    
+    .course-content h3 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 768px) {
+    #courses h2,
+    #course-detail h2, 
+    #lesson-content h1 {
+        font-size: 48px;
+        margin-bottom: 30px;
+    }
+    
+    .course-content h3 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 576px) {
+    #courses {
+        padding: 30px 15px;
+    }
+    
+    #courses h2,
+    #course-detail h2, 
+    #lesson-content h1 {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+    
+    .course-content h3 {
+        font-size: 1.4rem;
+    }
+    
+    #course-detail {
+        padding: 30px 15px;
+    }
+}
+
+/* Адаптация для очень маленьких экранов */
+@media (max-width: 400px) {
+    #courses h2,
+    #course-detail h2, 
+    #lesson-content h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .course-content h3 {
+        font-size: 1.2rem;
+    }
 }
 
 /* Стили для тестов */
