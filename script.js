@@ -1,4 +1,22 @@
 
+document.addEventListener('DOMContentLoaded', function() {
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('navLinks');
+    
+    burger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        burger.classList.toggle('active');
+    });
+    
+    const navItems = document.querySelectorAll('.nav-links a');
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            burger.classList.remove('active');
+        });
+    });
+});  
+
 document.addEventListener('DOMContentLoaded', function () {
     const categoryFilter = document.getElementById('category-filter');
     const durationFilter = document.getElementById('duration-filter');
